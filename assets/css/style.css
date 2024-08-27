@@ -8,7 +8,7 @@
   --colour-black: #000;
   --colour-white: #fff;
   --border-colour: #cbd6dc;
-  --text-secondary: #4d5256;
+  --text-secondary: #e3f2ff;
 
   --graph-light-bg: #fff;
   --graph-dark-bg: #050505;
@@ -19,14 +19,14 @@
 }
 
 #night-mode{
-  --background-colour: #050505;
-  --background-colour-primary: #29292e;
-  --background-colour-secondary: #082f55;
+  --background-colour: #122438;
+  --background-colour-primary: #2d929d;
+  --background-colour-secondary: #3a738e;
 
   --colour-black: #000;
   --colour-white: #fff;
   --border-colour: #2e2e2e;
-  --text-secondary: #bdbaba;
+  --text-secondary: #e3f2ff;
 
   --link-colour: #3a59f6;
 }
@@ -38,6 +38,10 @@
   outline: none;
   box-sizing: border-box;
   font-family: 'IBM Plex', sans-serif
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 div::-webkit-scrollbar{
@@ -108,3 +112,65 @@ body{
   font-weight: 600;
 }
 
+nav{
+  display:  flex;
+  align-items: centre;
+  justify-content: space-between;
+  background: var(--background-colour-primary);
+  padding:  14px 20px;
+  border-top: 1px solid var(--border-colour);
+  border-bottom: 1px solid var(--border-colour);
+
+}
+
+
+nav .left-section,
+nav .right-section{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav .left-section .logo{
+  font-weight: 600;
+  font-size: 26px
+}
+
+nav .left-section .nav-links{
+  display: flex;
+  gap: 10px;
+}
+
+nav .left-section .nav-links a{
+  font-size: 15px;
+  padding: 10px 14px; 
+  border-radius: 13px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+nav .left-section .nav-links a.active,
+nav .left-section .nav-links a:hover{
+  background: var(--background-colour-secondary);
+  color: var(--colour-white);
+}
+
+nav .right-section{
+  width: 30%;
+  gap: 20px;
+}
+
+nav .right-section .search{
+  display: flex;
+  align-items: center;
+  background: var(--background-colour-secondary);
+  padding: 2px 20px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+nav .right-section input{
+  padding: 10px 6px;
+  background: var(--background-colour-secondary);
+  color: var(--colour-white);
+}
