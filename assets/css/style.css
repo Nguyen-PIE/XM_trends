@@ -1,1 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+  --background-colour: #fff;
+  --background-colour-primary: #fff;
+  --background-colour-secondary: #eff2f5;
+
+  --colour-black: #000;
+  --colour-white: #fff;
+  --border-colour: #cbd6dc;
+  --text-secondary: #4d5256;
+
+  --graph-light-bg: #fff;
+  --graph-dark-bg: #050505;
+  --graph-light-border: #cbd6dc;
+  --graph-dark-border: #333; 
+
+  --link-colour: #3a59f6;
+}
+
+#night-mode{
+  --background-colour: #050505;
+  --background-colour-primary: #29292e;
+  --background-colour-secondary: #082f55;
+
+  --colour-black: #000;
+  --colour-white: #fff;
+  --border-colour: #2e2e2e;
+  --text-secondary: #bdbaba;
+
+  --link-colour: #3a59f6;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'IBM Plex', sans-serif
+}
+
+div::-webkit-scrollbar{
+  height: 8px;
+}
+
+div::-webkit-scrollbar-track{
+  border-radius: 12px;
+}
