@@ -164,7 +164,7 @@ nav .right-section .search{
   display: flex;
   align-items: center;
   background: var(--background-colour-secondary);
-  padding: 2px 20px;
+  padding: 0px 20px;
   border-radius: 12px;
   width: 100%;
 }
@@ -173,4 +173,19 @@ nav .right-section input{
   padding: 10px 6px;
   background: var(--background-colour-secondary);
   color: var(--colour-white);
+  font-size: 14px;
+}
+
+nav .right-section .search 
+input::placeholder,
+nav .right-section .search i{
+  color: var(--text-secondary);
+}
+
+nav .right-section > i{
+  padding: 8px;
+  background: var(--background-colour-secondary);
+  color: var(--colour-white);
+  border-radius: 12px;
+  font-size: 20px;
 }
