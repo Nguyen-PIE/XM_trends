@@ -188,4 +188,6 @@ nav .right-section > i{
   color: var(--colour-white);
   border-radius: 12px;
   font-size: 20px;
+  cursor: pointer;
+  transition: all;
 }
