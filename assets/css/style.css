@@ -189,5 +189,13 @@ nav .right-section > i{
   border-radius: 12px;
   font-size: 20px;
   cursor: pointer;
-  transition: all;
+  transition: all 0.3s ease;
+}
+
+nav .right-section > i.ri-sun-line {
+  transform: rotate(0deg);
+}
+
+nav .right-section > i.ri-moon-line {
+  transform: rotate(360deg);
 }
