@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-:root{
+:root {
   --background-colour: #fff;
   --background-colour-primary: #fff;
   --background-colour-secondary: #eff2f5;
 
-  --colour-black: #000;
+  --colour-black: #000000;
   --colour-white: #fff;
   --border-colour: #cbd6dc;
   --text-secondary: #e3f2ff;
@@ -13,12 +13,12 @@
   --graph-light-bg: #fff;
   --graph-dark-bg: #050505;
   --graph-light-border: #cbd6dc;
-  --graph-dark-border: #333; 
+  --graph-dark-border: #333;
 
   --link-colour: #3a59f6;
 }
 
-#night-mode{
+#night-mode {
   --background-colour: #122438;
   --background-colour-primary: #2d929d;
   --background-colour-secondary: #3a738e;
@@ -31,7 +31,7 @@
   --link-colour: #3a59f6;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   border: none;
@@ -40,58 +40,66 @@
   font-family: 'IBM Plex', sans-serif
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-div::-webkit-scrollbar{
+div::-webkit-scrollbar {
   height: 8px;
 }
 
-div::-webkit-scrollbar-track{
+div::-webkit-scrollbar-track {
   border-radius: 12px;
 }
 
-div::-webkit-scrollbar-thumb{
+div::-webkit-scrollbar-thumb {
   background-color: var(--background-colour);
   border-radius: 12px;
   width: 20%;
 }
 
-.red{
+.red {
   color: red !important;
 }
 
-.green{
-  color: green !important; 
+.green {
+  color: green !important;
 }
 
-p.red{
+p.red {
   font-weight: 600 !important
 }
 
-a{
+a {
   color: var(--colour-white);
   text-decoration: none;
 }
 
-i{
+i {
   color: var(--colour-white);
 }
 
-img{
+img {
   object-fit: cover;
 }
 
-table tr td img{
-  width: 32px;
+table tr td img {
+  width: 60px;
   height: 32px;
   vertical-align: middle;
   margin-right: 6px;
   border-radius: 12px;
 }
 
-body{
+table tr td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+table tr td:last-child {
+  border-radius: 0 12px 12px;
+}
+
+body {
   background: var(--background-colour);
   display: flex;
   flex-direction: column;
@@ -99,76 +107,75 @@ body{
   transition: all 0.5s ease;
 }
 
-.main{
+.main {
   flex: 1;
   min-height: calc(100vh - 120px);
 }
 
-.global{
+.global {
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 16px 20px;
 }
 
-.global p{
+.global p {
   font-size: 12px;
   color: var(--colour-white);
 }
 
-.global p span{
+.global p span {
   font-weight: 600;
 }
 
-nav{
-  display:  flex;
+nav {
+  display: flex;
   align-items: centre;
   justify-content: space-between;
   background: var(--background-colour-primary);
-  padding:  14px 20px;
+  padding: 14px 20px;
   border-top: 1px solid var(--border-colour);
   border-bottom: 1px solid var(--border-colour);
 
 }
 
-
 nav .left-section,
-nav .right-section{
+nav .right-section {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-nav .left-section .logo{
+nav .left-section .logo {
   font-weight: 600;
   font-size: 26px
 }
 
-nav .left-section .nav-links{
+nav .left-section .nav-links {
   display: flex;
   gap: 10px;
 }
 
 nav .left-section .nav-links a{
   font-size: 15px;
-  padding: 10px 14px; 
+  padding: 10px 14px;
   border-radius: 13px;
   color: var(--text-secondary);
   transition: all 0.3s ease;
 }
 
 nav .left-section .nav-links a.active,
-nav .left-section .nav-links a:hover{
+nav .left-section .nav-links a:hover {
   background: var(--background-colour-secondary);
   color: var(--colour-white);
 }
 
-nav .right-section{
+nav .right-section {
   width: 30%;
   gap: 20px;
 }
 
-nav .right-section .search{
+nav .right-section .search {
   display: flex;
   align-items: center;
   background: var(--background-colour-secondary);
@@ -177,20 +184,19 @@ nav .right-section .search{
   width: 100%;
 }
 
-nav .right-section input{
+nav .right-section input {
   padding: 10px 6px;
   background: var(--background-colour-secondary);
   color: var(--colour-white);
   font-size: 14px;
 }
 
-nav .right-section .search 
-input::placeholder,
-nav .right-section .search i{
+nav .right-section .search input::placeholder,
+nav .right-section .search i {
   color: var(--text-secondary);
 }
 
-nav .right-section > i{
+nav .right-section>i {
   padding: 8px;
   background: var(--background-colour-secondary);
   color: var(--colour-white);
@@ -200,19 +206,107 @@ nav .right-section > i{
   transition: all 0.3s ease;
 }
 
-nav .right-section > i.ri-sun-line {
+nav .right-section>i.ri-sun-line {
   transform: rotate(0deg);
 }
 
-nav .right-section > i.ri-moon-line {
+nav .right-section>i.ri-moon-line {
   transform: rotate(360deg);
 }
 
-.trending{
+.trending {
   margin: 40px;
   display: flex;
   justify-content: center;
 }
 
+.trending h3 {
+  color: var(--colour-white);
+  font-weight: 540;
+  width: 100%;
+  margin-bottom: 13px;
+}
 
 
+.trending .products-wrapper .container {
+  background: var(--background-colour-primary);
+  padding: 12px 80px;
+  border-radius: 16px;
+  border: 1px solid var(--border-colour);
+}
+
+.trending table {
+  width: 100%;
+  border-spacing: 0 10px;
+}
+
+.trending table th{
+  color: var(--colour-white);
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-colour);
+
+}
+
+.trending table th,
+.trending table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.trending table tr td{
+  padding: 5px
+}
+
+.trending table tr td{
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.trending thead tr:hover{
+  background: transparent !important;
+  cursor: unset !important; 
+}
+
+.trending .products-wrapper table tr {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trending .products-wrapper table tr:hover,
+.trending .products-wrapper table tr:hover td.table-fixed-column {
+  background: var(--background-colour-secondary);
+}
+
+.trending .products-wrapper .container .table-fixed-column{
+  left: -20px;
+}
+
+.table-fixed-column{
+  background: var(--background-colour-primary);
+  position: sticky;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.spinner{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--text-secondary);
+  border-top: 6px solid var(--background-colour-secondary);
+  border-radius: 50%;
+  margin: 10px auto 20px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
